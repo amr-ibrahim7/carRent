@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/rentmycar.css">
+
+
+</head>
+
+<body class="bg-light text-dark">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <img class="navbar-brand me-2" width="120" height="120" src="images/Car_logo.png">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon bg-light rounded-2"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="homepage.html">Homepage</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="carListing.html">list of cars</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="rentmycar.html">Rent my car</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="MyCarRentdisplay.html">My cars</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="bookinghistory.html">My Bookings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <div class="card shadow-lg p-4">
+            <h2 class="mb-4 text-center text-primary">Add a Car</h2>
+            <form id="carForm" class="row g-3">
+                <div class="col-md-6">
+                    <label for="brand" class="form-label">Brand</label>
+                    <input type="text" id="brand" class="form-control" placeholder="Toyota, Ford..." required>
+                </div>
+                <div class="col-md-6">
+                    <label for="model" class="form-label">Model</label>
+                    <input type="text" id="model" class="form-control" placeholder="Corolla, Mustang..." required>
+                </div>
+                <div class="col-md-4">
+                    <label for="year" class="form-label">Year</label>
+                    <input type="number" id="year" class="form-control" min="1990" max="2025" placeholder="2020"
+                        required>
+                </div>
+                <div class="col-md-4">
+                    <label for="price" class="form-label">Price/Day ($)</label>
+                    <input type="number" id="price" class="form-control" min="1" placeholder="50" required>
+                </div>
+                <div class="col-md-4">
+                    <label for="transmission" class="form-label">Transmission</label>
+                    <select id="transmission" class="form-select" required>
+                        <option value="">Choose...</option>
+                        <option value="Automatic">Automatic</option>
+                        <option value="Manual">Manual</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label for="capacity" class="form-label">Capacity (seats)</label>
+                    <input type="number" id="capacity" class="form-control" min="1" placeholder="e.g., 5" required>
+                </div>
+                <div class="col-md-4">
+                    <label for="photo" class="form-label">Car Photo (JPG only)</label>
+                    <input type="file" id="photo" class="form-control" accept="image/jpeg" required>
+                </div>
+                <div class="col-12">
+                    <button type="submit" class="btn btn-success w-100">Add Car</button>
+                </div>
+            </form>
+        </div></div>
+
+        <div class="container mt-5">
+            <h3 class="text-center text-dark bg-success-subtle">Manage Your Cars</h3>
+            <hr>
+            <section class="py-4 px-2 rounded shadow-sm">
+              <div id="carList" class="row gy-4 mt-3"></div>
+            </section>
+          </div>
+          
+
+        <!-- Toast Container -->
+        <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+            <div id="carAddedToast" class="toast fade align-items-center text-bg-success border-0" role="alert"
+                aria-live="assertive" aria-atomic="true">
+
+                <div class="d-flex">
+                    <div class="toast-body">
+                        Car successfully added!
+                    </div>
+                    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+                        aria-label="Close"></button>
+                </div>
+            </div>
+        </div>
+
+        <footer class="text-center text-lg-start custom-footer">
+            <div class="container text-center text-md-start">
+                <div class="row text-center text-md-start">
+                    <div class="col-md-3 mb-4">
+                        <img class="navbar-brand me-2" width="200" height="200" src="images/Car_logo.png"
+                            alt="GoWheels Logo">
+                        <p>Your reliable car rental partner for every road ahead.</p>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                        <h6 class="text-uppercase fw-bold">Quick Links</h6>
+                        <ul class="list-unstyled footer-links">
+                            <li><a href="homepage.html">Homepage</a></li>
+                            <li><a href="carListing.html">Cars</a></li>
+                            <li><a href="bookinghistory.html">History</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                        <h6 class="text-uppercase fw-bold">Contact</h6>
+                        <p><i class="fas fa-home me-2"></i> New Cairo, Egypt</p>
+                        <p><i class="fas fa-envelope me-2"></i> info@gowheels.com</p>
+                        <p><i class="fas fa-phone me-2"></i> +20 100 000 0000</p>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                        <h6 class="text-uppercase fw-bold">Follow Us</h6>
+                        <div class="footer-social-icons">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="js/rentmycar.js">
+        </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

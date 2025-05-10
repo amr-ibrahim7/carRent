@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Available Cars for Booking</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/displaymycar.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <img class="navbar-brand me-2" width="120" height="120" src="images/Car_logo.png">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon bg-light rounded-2"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="homepage.html">Homepage</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="carListing.html">list of cars</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="rentmycar.html">Rent my car</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="MyCarRentdisplay.html">My cars</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="bookinghistory.html">My Bookings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Car Cards -->
+    <div class="container-fluid my-5 px-4">
+        <h3 class="text-center mb-4 text-capitalize text-white bg-success">Your cars that you display for rent</h3>
+        <div id="carList" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 gy-4"></div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="text-center text-lg-start custom-footer">
+        <div class="container text-center text-md-start">
+            <div class="row text-center text-md-start">
+                <div class="col-12 col-sm-6 col-md-3 mb-4">
+                    <img class="navbar-brand me-2" width="200" height="200" src="images/Car_logo.png"
+                        alt="GoWheels Logo">
+                    <p>Your reliable car rental partner for every road ahead.</p>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3 mb-4">
+                    <h6 class="text-uppercase fw-bold">Quick Links</h6>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="homepage.html">Homepage</a></li>
+                        <li><a href="carListing.html">Cars</a></li>
+                        <li><a href="bookinghistory.html">Bookings</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3 mb-4">
+                    <h6 class="text-uppercase fw-bold">Contact</h6>
+                    <p><i class="fas fa-home me-2"></i> New Cairo, Egypt</p>
+                    <p><i class="fas fa-envelope me-2"></i> info@gowheels.com</p>
+                    <p><i class="fas fa-phone me-2"></i> +20 100 000 0000</p>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3 mb-4">
+                    <h6 class="text-uppercase fw-bold">Follow Us</h6>
+                    <div class="footer-social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script -->
+    <script src="js/rentdisplay.js">
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

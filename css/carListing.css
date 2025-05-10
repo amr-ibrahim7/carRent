@@ -1,0 +1,408 @@
+body
+{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to top,#FF2742, #1F3044 67%);
+
+}
+/* ========================== main header ========================== */
+.navbar
+{
+    background-color: #1F3044 !important;
+    font-size: 20px;
+    animation: slideDown 0.8s ease;
+}
+
+.navbar-brand
+{
+    color: #fff;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.navbar-nav .nav-link
+{
+    color: #fff !important;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover
+{
+    font-weight: bold;
+    color: #FF2742 !important;
+}
+
+/* ============================ car listing header ======================== */
+.pageHeader
+{
+    height: 400px;
+    width: 100%;
+    margin-bottom: 90px;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background:linear-gradient(rgba(10, 10, 10, 0.205), rgba(10, 10, 10, 0.205)), url('../images/bg3.jpg') center/cover;
+    background-size: 100% 100%;
+    background-attachment:unset;
+}
+.pageHeader h1
+{
+    font-size: 4rem;
+    font-weight: 700;
+    color: white;
+}
+.pageHeader span
+{
+    color: #FF2742;
+}
+
+@media (max-width: 991.98px)
+{
+    .pageHeader
+    {
+        height: 300px;
+    }
+}
+
+/* ============================== search and filter and reset buttons ============================== */
+
+#searchFilter
+{
+    margin: auto;
+    width: 90%;
+    height: auto; 
+}
+
+#searchInput, #typeFilter, #priceFilter
+{
+    padding: 10px;
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, 0.849);
+}
+
+#applyFiltersBtn, #resetFiltersBtn
+{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#applyFiltersBtn
+{
+    background-color: #FF2742;
+    border-color: #FF2742;
+}
+
+#applyFiltersBtn:hover
+{
+    background-color: white;
+    border-color: white;
+    color: #b80b1f;
+}
+
+#resetFiltersBtn
+{
+    background-color: #1F3044;
+    border-color: #1F3044;
+    width: 200px;
+    margin: auto;
+    font-size: 25px;
+}
+
+#resetFiltersBtn:hover
+{
+    background-color: white;
+    border-color: white;
+    color: #1F3044;
+}
+
+/* ================================ car container & car cards ================================= */
+
+#carsContainer
+{
+    width: 70%;
+    height: auto;
+    margin: auto;
+    padding: 20px;
+    background-color: rgba(208, 209, 218, 0.822);
+    border-radius: 1rem;
+}
+
+.car_card
+{
+    width: 90%;
+    height: auto;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #f0edede1;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.5s ease;
+    overflow: hidden;
+    position: relative;
+    flex-direction: row;
+
+}
+
+#carsContainer .car_card:nth-child(even)
+{
+    flex-direction: row-reverse;
+}
+
+.car_card:hover
+{
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    background-color: #1F3044;
+    border-color: #1F3044;
+    color: white; 
+}
+.car_card:hover .car_features,
+.car_card:hover .car_price,
+.car_card:hover .car_title,
+.car_card:hover .card_text
+{
+    color: white;
+}
+
+.car_image
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.car_image img
+{
+    width: 300px;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+    transform-origin: center center;
+}
+
+.car_image img:hover
+{
+    transform: scale(1.25);
+}
+
+.car_title, .card_text
+{
+    color: #1F3044;
+}
+
+.car_details
+{
+    transition: all 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.car_rating
+{
+    color: gold;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.car_rating span
+{
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.car_title
+{
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.car_features
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    color: #1F3044;
+    margin-bottom: 1.5rem;
+}
+
+.car_buttons
+{
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.btn_book
+{
+    background: transparent;
+    border-color: #FF2742;
+    border: 3px solid #FF2742;
+    font-size: 20px;
+    color: #FF2742;
+    padding: 0.6rem 2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn_book:hover
+{
+    background-color: #FF2742;
+    color: white;
+}
+
+.btn_book.disabled
+{
+    pointer-events: none;
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+
+.btn_details
+{
+    background: transparent;
+    border: 3px solid goldenrod;
+    color: goldenrod;
+    font-size: 20px;
+    padding: 0.6rem 2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn_details:hover
+{
+    background-color: goldenrod;
+    color: white;
+}
+
+.car_price
+{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1F3044;;
+}
+
+@media (max-width: 1024px)
+{
+    .car_card, #carsContainer .car_card:nth-child(even)
+    {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+    }
+
+    .car_image img
+    {
+        width: 100%;
+    }
+
+    .car_details
+    {
+        margin-top: 1rem;
+    }
+
+    .car_features
+    {
+        justify-content: center;
+    }
+
+    .car_buttons
+    {
+        flex-direction: column;
+    }
+}
+
+/* =========================================  Badge for Car Status ================================= */
+.cardBadge
+{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #28a745;
+    color: white;
+    padding: 5px 10px;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+/* ========================================== Empty Result Message ================================== */
+
+.emptyText
+{
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    color:#FF2742;
+}
+
+/* ======================================== Pagination & reset-btn ==================================== */
+.pagination
+{
+    justify-content: center;
+    margin-top: 30px;
+}
+
+
+.page-item.active .page-link
+{
+    background-color: #FF2742;
+    border-color: #FF2742;
+}
+
+.page-link
+{
+    color: #FF2742;
+    background-color: rgba(255, 255, 255, 0.849);
+    font-size: 20px;
+}
+.page-link:hover
+{
+    color: #1F3044;
+}
+
+.reset
+{
+    display: flex;
+    justify-content: center;
+    margin-left: 70%;
+    margin-bottom: 50px;
+}
+
+@media (max-width: 768px)
+{
+    .card-img-top
+    {
+        height: 150px;
+    }
+}
+
+/* =================================== footer ======================================= */
+
+footer
+{
+    background-color: #1F3044;
+    color: #fff;
+    padding: 40px 0;
+}
+footer a
+{
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+footer a:hover
+{
+   font-weight: bold;
+    color: #FF2742;
+}

@@ -1,0 +1,173 @@
+body {
+    background-color: #1F3044;
+    color: #fff;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+}
+
+/* =================================  main header style  ================================ */
+.navbar {
+    background-color: #1F3044 !important;
+    font-size: 20px;
+    animation: slideDown 0.8s ease;
+}
+
+.navbar-brand {
+    color: #fff;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.navbar-nav .nav-link {
+    color: #fff !important;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    font-weight: bold;
+    color: #FF2742 !important;
+}
+
+/* =================================  the contact page header style  ================================ */
+.hero-section
+{
+    text-align: center;
+    padding: 5rem 0;
+    background:linear-gradient(rgba(10, 10, 10, 0.205), rgba(10, 10, 10, 0.205)), url('../images/bg3.jpg') center/cover;
+    height: 400px;
+}
+
+.hero-title
+{
+    font-size: 4rem;
+    font-weight: 700;
+    color: white;
+}
+
+.hero-title span
+{
+    color: #FF2742;
+}
+
+/* =================================  the small contact cards style  ================================ */
+.contact-card-wrapper
+{
+    margin-top: -60px;
+    z-index: 10;
+    position: relative;
+}  
+
+.contact-card
+{
+    padding: 2rem;
+    color: #1F3044;
+    background-color: rgba(255, 255, 255, 0.849);
+    border-radius: 1rem;
+    transition: background-color 0.3s;
+}
+
+.contact-card .icon
+{
+    font-size: 2rem;
+    color: #1F3044;
+}
+
+.contact-card:hover, .contact-card:hover .icon
+{
+    background-color: #FF2742;
+    color: rgba(255, 255, 255, 0.849);;
+    transition: transform 0.5s ease;
+    transform: translateY(-10px) scale(1.01);
+}
+
+/* =================================  the form & map container style  ================================ */
+.mapContainer
+{
+    background-color: #1F3044;
+    margin-top: 100pxpx;
+}
+
+#contactForm input, #message
+{
+    font-size: 15px;
+    background-color: rgba(255, 255, 255, 0.849);
+}
+
+.submit_btn, .rent_btn
+{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #FF2742;
+    border-color: #FF2742;
+    border-radius: 10px;
+}
+.whats_btn
+{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: rgb(28, 180, 28);
+    border-color: rgb(28, 180, 28);;
+    border-radius: 10px;
+}
+
+.submit_btn:hover, .rent_btn:hover
+{
+    background-color: #b80b1f;
+    border-color: #b80b1f;
+    transition: transform 0.3s ease;
+    transform: scale(1.02);
+}
+
+.whats_btn:hover
+{
+    background-color: rgb(9, 107, 9);
+}
+.error-message
+{
+    color: #FF2742;
+    font-size: 0.9em;
+    display: none;
+}
+
+/* ================= callin for users to rent with us ( the part before the footer ) style ================ */
+.calling
+{
+    background:linear-gradient(rgba(10, 10, 10, 0.205), rgba(10, 10, 10, 0.205)), url('../images/bg3.jpg') center/cover;
+    height: 400px;
+}
+.calling h6
+{
+    color: #FF2742;
+    font-size: 20px;
+    font-weight: bolder;
+}
+.calling h2
+{
+    color: white;
+}
+.calling p
+{
+    font-size: 22px;
+    color: white;
+}
+
+/* =============================  footer  ============================ */
+footer
+{
+    background-color: #1F3044;
+    color: #fff;
+    padding: 40px 0;
+}
+footer a
+{
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+footer a:hover
+{
+   font-weight: bold;
+    color: #FF2742;
+}

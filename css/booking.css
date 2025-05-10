@@ -1,0 +1,224 @@
+/* ===== GENERAL STYLING ===== */
+body {
+    background: linear-gradient(-45deg, #e5ebf2, #fff8f8, #e1e7ee, #fce4ec);
+    background-size: 400% 400%;
+    animation: gradientMove 15s ease infinite;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    background-color: #1F3044 !important;
+    font-size: 25px;
+}
+
+.navbar-brand {
+    color: #fff;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover {
+    animation: bounce 0.6s;
+}
+
+.navbar-nav .nav-link {
+    color: #fff !important;
+}
+
+.navbar-nav .nav-link:hover {
+    font-weight: bold;
+    color: #FF2742 !important;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background-color: #1F3044;
+    color: #fff;
+    padding: 40px 0;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #FF2742;
+}
+
+/* ===== FORM ===== */
+#bookingForm {
+    background: linear-gradient(15deg, #e5ebf2, #fff8f8, #e1e7ee);
+    color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    animation: popIn 0.8s ease-in-out;
+}
+
+h4 {
+    color: #1F3044;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+form h4 {
+    color: #0d47a1;
+}
+
+label {
+    font-weight: bold;
+    color: #1F3044;
+    font-size: 25px;
+}
+
+.form-control,
+.formselect {
+    border-radius: 10px !important;
+    border: 5px solid #1F3044;
+    transition: box-shadow 0.3s ease;
+}
+
+select.form-control {
+    width: 100%;
+    padding: 10px 12px;
+    border: 5px solid #1F3044;
+    border-radius: 10px;
+    background-color: #ffffff;
+    font-size: 1rem;
+    color: #333;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%231F3044" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 20px 20px;
+  }
+  
+  select.form-control:focus {
+    border-color: #FF2742;
+    box-shadow: 0 0 8px #FF2742;
+  }
+
+
+
+.form-control:focus {
+    border-color: #FF2742;
+    box-shadow: 0 0 0.2rem rgba(255, 39, 66, 0.25);
+}
+
+/* ===== BUTTONS ===== */
+.btn-primary {
+    background-color: #1F3044;
+    border-color: #1F3044;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+    background-color: #FF2742;
+    border-color: #FF2742;
+    animation: pulse 0.4s ease-in-out;
+}
+
+/* Location Button */
+#locationButton {
+    background-color: #1F3044;
+    border: none;
+    font-weight: bold;
+    color: white;
+}
+
+#locationButton:hover {
+    background-color: #FF2742;
+}
+
+/* Horizontal Rule */
+hr {
+    color: #FF2742;
+}
+
+/* ===== CONFIRMATION MESSAGE ===== */
+#confirmation {
+    animation: fadeIn 1s ease-in-out;
+    margin-top: 20px;
+    border: 2px solid #198754;
+    background-color: #e6f7f0;
+    color: #155724;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#bookingSummary {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes popIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}

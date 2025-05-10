@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>adminBooking</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/adminBookingList.css" />
+  </head>
+
+  <body>
+    <main class="container-fluid p-0 d-flex">
+      <!-- Sidebar Navigation -->
+      <nav class="d-flex flex-column p-3 m-0 nav text-muted col-xl-2">
+        <div>
+          <!-- Logo -->
+          <h4 class="mb-4 logoContainer">
+            <img class="logo" src="images/Car_logo.png" />
+          </h4>
+          <!-- Navigation Links -->
+          <span>
+            <i class="bi bi-grid"></i>
+            <a href="dashboard.html" class="nav-link">Dashboard</a>
+          </span>
+          <span class="bookingTab">
+            <i class="bi bi-check2-square"></i>
+            <a href="adminBookingList.html" class="nav-link">Bookings</a>
+          </span>
+          <span>
+            <i class="bi bi-car-front-fill"></i>
+            <a href="carUnits.html" class="nav-link">Units</a>
+          </span>
+          <span>
+            <i class="bi bi-calendar2-week"></i>
+            <a href="#" class="nav-link">Calendar</a>
+          </span>
+
+          <span>
+            <i class="bi bi-person-circle"></i>
+            <a href="#" class="nav-link">Clients</a>
+          </span>
+          <span>
+            <i class="bi bi-person-badge"></i>
+            <a href="#" class="nav-link">Drivers</a>
+          </span>
+          <span>
+            <i class="bi bi-coin"></i>
+            <a href="#" class="nav-link">Financials</a>
+          </span>
+          <span>
+            <i class="bi bi-stoplights"></i>
+            <a href="#" class="nav-link">Tracking</a>
+          </span>
+          <span>
+            <i class="bi bi-chat-dots"></i>
+            <a href="#" class="nav-link">Messages</a>
+            <span class="circle">5</span>
+          </span>
+        </div>
+        <div>
+          <!-- Logout Button -->
+
+          <span>
+            <i class="bi bi-box-arrow-right text-danger"></i>
+            <a href="#" class="nav-link text-danger" id="logoutBtn">Logout</a>
+          </span>
+        </div>
+      </nav>
+      <!-- Main Body Section -->
+      <div class="body col-10 container-fluid mx-0 bg-light">
+        <!-- Header with Admin Info -->
+
+        <div class="row">
+          <div class="container-fluid py-3 px-4 head">
+            <h4>Bookings</h4>
+            <nav class="d-flex gap-4">
+              <a href="#"><i class="bi bi-search"></i></a>
+              <a href="#"><i class="bi bi-gear"></i></a>
+              <a href="#"><i class="bi bi-bell"></i></a>
+
+              <div class="d-flex gap-3">
+                <img src="images/p1.png" alt="Profile" class="profile-img" />
+                <div>
+                  <h6 id="admin"></h6>
+                  <h6 style="color: lightgray">Admin</h6>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+        <!-- Booking Stats and Chart -->
+        <div class="row container-fluid d-flex">
+          <div class="row gy-3">
+            <!-- Booking Stats Cards -->
+
+            <div class="col-12 col-xl-6 d-flex flex-wrap gap-3">
+              <div class="chartItem">
+                <span>
+                  <i class="bi bi-currency-dollar dollar"></i>
+                  <span>Upcoming Bookings</span>
+                </span>
+                <h3 class="fw-bold fs-4 text-black">145</h3>
+                <span class="arrowUp">
+                  <i class="bi bi-arrow-up"></i>
+                  <span>+2.97%</span>
+                </span>
+                <p>From last week</p>
+              </div>
+              <div class="chartItem">
+                <span>
+                  <i class="bi bi-currency-dollar dollar"></i>
+                  <span>Pending Bookings</span>
+                </span>
+                <h3 class="fw-bold fs-4 text-black">106</h3>
+                <span class="arrowUp">
+                  <i class="bi bi-arrow-up"></i>
+                  <span>+1.72%</span>
+                </span>
+                <p>From last week</p>
+              </div>
+              <div class="chartItem">
+                <span>
+                  <i class="bi bi-currency-dollar dollar"></i>
+                  <span>Canceled Bookings</span>
+                </span>
+                <h3 class="fw-bold fs-4 text-black">86</h3>
+                <span class="arrowDown">
+                  <i class="bi bi-arrow-down"></i>
+                  <span>-4.02%</span>
+                </span>
+                <p>From last week</p>
+              </div>
+              <div class="chartItem">
+                <span>
+                  <i class="bi bi-currency-dollar bg-light dollar"></i>
+                  <span>Completed Bookings</span>
+                </span>
+                <h3 class="fw-bold fs-4 text-black">298</h3>
+                <span class="arrowUp">
+                  <i class="bi bi-arrow-up"></i>
+                  <span>+3.15%</span>
+                </span>
+                <p>From last week</p>
+              </div>
+            </div>
+            <!-- Chart Section -->
+
+            <div class="col-12 col-xl-6">
+              <div class="p-3 bg-white rounded shadow-sm h-100">
+                <div
+                  class="d-flex justify-content-between align-items-center mb-3"
+                >
+                  <h5 class="mb-0">Bookings Overview</h5>
+                  <select class="form-select w-auto bg-light">
+                    <option>Last 8 Months</option>
+                    <option>Last One year</option>
+                    <option>Last Two years</option>
+                  </select>
+                </div>
+                <canvas id="myChart"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Table Section -->
+
+        <div class="row my-3 mx-2 d-flex flex-column">
+          <div class="col-12">
+            <!-- Table Controls -->
+
+            <nav class="navbar bg-white d-flex px-3 justify-content-between">
+              <div>
+                <a class="navbar-brand">Car Bookings</a>
+              </div>
+              <div class="d-flex gap-2">
+                <form class="d-flex" id="searchBar" role="search">
+                  <input
+                    class="form-control me-2"
+                    style="width: 250px"
+                    type="search"
+                    placeholder="Search client name,car,etc"
+                    aria-label="Search"
+                  />
+                </form>
+
+                <div class="dropdown">
+                  <button
+                    class="btn btn-light dropdown-toggle"
+                    type="button"
+                    id="dropdownMenuButton"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Offers
+                  </button>
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="dropdownMenuButton"
+                  >
+                    <li>
+                      <a class="dropdown-item offer" href="#">Free Fuel</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item offer" href="#">20% Off</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item offer" href="#">Extra Day Free</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item offer" href="#">reset filter</a>
+                    </li>
+                  </ul>
+                </div>
+
+                <button id="addBookingBtn" type="button" class="btn btn-danger">
+                  Add Booking
+                </button>
+              </div>
+            </nav>
+            <!-- Table -->
+
+            <table class="table mt-3">
+              <thead id="tableHead">
+                <tr>
+                  <th>Car ID</th>
+                  <th>Car Model</th>
+                  <th>Client Name</th>
+                  <th>Offer</th>
+                  <th>PickUp</th>
+                  <th>DropOff</th>
+                  <th>TotalDays</th>
+                </tr>
+              </thead>
+              <tbody id="bookingTableBody" class="tableRows">
+                <!-- Data will be injected here -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Footer -->
+    <footer class="p-3">
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="copyright">Copyright © 2024 Peterdraw</div>
+        <div class="footer-links">
+          <a href="#" class="me-3">Privacy Policy</a>
+          <a href="#" class="me-3">Terms and Conditions</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="social-links">
+          <a href="#" class="me-2"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="me-2"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" class="me-2"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="me-2"><i class="bi bi-youtube"></i></a>
+          <a href="#"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+      crossorigin="anonymous"
+    ></script>
+
+    <script type="module" src="js/adminBookingList.js"></script>
+    <!-- Chart.js -->
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/chart.js"></script>
+
+    <script type="module" src="js/booking.js"></script>
+  </body>
+</html>

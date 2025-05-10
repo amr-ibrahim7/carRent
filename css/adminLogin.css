@@ -1,0 +1,111 @@
+* {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: #f2f2f2;
+  }
+
+  .leftSide {
+    height: 100vh;
+    background-color: #ffffff;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .leftSide h3 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  .leftSide h4 {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 2rem;
+  }
+
+  .form {
+    width: 100%;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  label {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+  }
+
+  input {
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: 1.5px solid #ccc;
+    transition: border 0.2s;
+  }
+
+  input:focus {
+    outline: none;
+    border-color: #bb2727;
+    box-shadow: 0 0 5px rgba(187, 39, 39, 0.3);
+  }
+
+  button {
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #bb2727;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+  }
+
+  button:hover {
+    background-color: #a02020;
+  }
+
+  #login-msg {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .rightSide {
+    height: 100vh;
+    background: repeating-linear-gradient(
+      45deg,
+      #ffffff,
+      #ffffff 20px,
+      #f0f0f0 20px,
+      #f0f0f0 40px
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .carLogo {
+    width: 80%;
+    max-width: 450px;
+  }
+
+  @media (max-width: 768px) {
+    .leftSide,
+    .rightSide {
+      height: auto;
+    }
+
+    .carLogo {
+      width: 60%;
+      margin-top: 2rem;
+    }
+  }

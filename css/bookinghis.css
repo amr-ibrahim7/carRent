@@ -1,0 +1,83 @@
+/* ===== RESET & LAYOUT ===== */
+body {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+/* Flex container to stick footer to bottom */
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.flex-fill {
+    flex: 1 0 auto;
+}
+
+footer {
+    flex-shrink: 0;
+    background-color: #1F3044;
+    color: #fff;
+    padding: 40px 0;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    font-weight: bold;
+    color: #FF2742;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    background-color: #1F3044 !important;
+    font-size: 20px;
+    animation: slideDown 0.8s ease;
+}
+
+.navbar-brand {
+    color: #fff;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.navbar-nav .nav-link {
+    color: #fff !important;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    font-weight: bold;
+    color: #FF2742 !important;
+}
+
+/* ===== BOOKING CARD ===== */
+.booking-card {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.booking-card:hover {
+    transform: translateY(-5px);
+}
+
+.booking-card h5 {
+    color: #1F3044;
+    font-weight: bold;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 576px) {
+    .navbar-brand {
+        width: 70px !important;
+        height: 70px !important;
+    }
+}

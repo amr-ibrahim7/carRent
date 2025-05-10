@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+  
+
+.nav {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.nav>div>span {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 0 5px;
+    vertical-align: middle;
+}
+
+.nav>div>span>a {
+    color: grey;
+}
+
+.nav>div>span:hover {
+    background-color: lightblue;
+    border-radius: 5px;
+    opacity: 0.6;
+}
+
+.nav>div>span:hover>a {
+    color: black;
+    font-weight: 500;
+}
+
+.nav>div>span:hover>i {
+    color: red;
+}
+
+.circle {
+    background-color: rgb(219, 28, 28);
+    width: 19px;
+    height: 19px;
+    border-radius: 50%;
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+}
+
+
+#tableHead tr th{
+    background-color: #C5E6F9 !important;
+    
+}
+
+.tableHead >th{
+    padding: 10px;
+    
+}
+.tableRows {
+    background-color: white;
+    border-bottom: 1px solid lightgrey;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    vertical-align: middle;
+
+    
+
+}
+ 
+
+.carType{
+    background-color:#cf3050;
+    padding: 0 5px;
+    border: none;
+    color: white;
+    border-radius: 5px;
+}
+.location{
+    background-color: #C5E6F9;
+    font-weight: bold;
+    padding: 0 5px;
+    border-radius: 5px;
+}
+
+
+.bookingTab {
+    background-color: lightblue;
+    border-radius: 100px;
+}
+
+.nav>div>.bookingTab>i {
+    color: red;
+}
+
+.head{
+    display: flex;
+    justify-content: space-between;
+}
+.head > nav > a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    color: black;
+    border-radius: 10px;
+}
+.logo{
+    width: 50px;
+    height: 50px;
+    
+}
+.logoContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chartItem{
+    width: 48%;
+    background-color: white;
+    padding: 5px;
+    border-radius: 10px;
+    color: grey;    
+}
+.arrowUp{
+    background-color: #C5E6F9;
+    padding: 0 8px;
+    border-radius: 7px;
+}
+.arrowDown{
+    background-color: #f5b1be;
+    padding: 0 8px;
+    border-radius: 7px;
+}
+.dollar{
+    background-color: rgb(200, 236, 200);
+    text-align: center;
+    padding-left: 3px;
+    padding-right: 3px;
+    border-radius: 5px;
+}
+.paginationStyle{
+    display: flex;
+    justify-content: end;
+}
+.paginationStyle nav ul{
+    display: flex;
+    gap: 10px;
+}
+.paginationStyle nav ul li{
+    border-radius: 10px;
+}
+.paginationStyle nav ul li a{
+    background-color: rgb(236, 236, 236);
+    color: rgb(43, 43, 43);
+}
+
+.chartContainer{
+    border-radius: 10px;
+}
+.filteringChart{
+    border-radius: 10px;
+    padding: 0 10px;
+    border: none;
+}
+
+
+footer {
+    border-top: 1px solid #e6e6e6;
+    color: #6c757d;
+    font-size: 0.875rem;
+}
+
+footer a {
+color: #6c757d;
+text-decoration: none;
+}
+
+footer a:hover {
+color: #f63854;
+}
+
+.social-links a {
+font-size: 1rem;
+}

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Car Booking & Personal Details</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/booking.css">
+
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <img class="navbar-brand me-2" width="120" height="120" src="images/Car_logo.png">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon bg-light rounded-2"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="homepage.html">Homepage</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="carListing.html">list of cars</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="rentmycar.html">Rent my car</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="MyCarRentdisplay.html">My cars</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="bookinghistory.html">My Bookings</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Personal Details Form -->
+  <div class="container mt-5">
+    <h2 class="text-center mb-4">Enter Your Booking Details</h2>
+    <form id="bookingForm" class="row g-3 needs-validation p-4 border rounded shadow-sm bg-light" novalidate>
+      <h4 class="gradient">Pick-up Data</h4>
+      <div class="col-md-6">
+
+        <label for="firstName" class="form-label">First Name</label>
+        <input type="text" class="form-control " id="firstName" placeholder="Enter your first name" required>
+      </div>
+
+      <div class="col-md-6">
+        <label for="lastName" class="form-label">Last Name</label>
+        <input type="text" class="form-control" id="lastName" placeholder="Enter your last name" required>
+      </div>
+
+      <div class="col-md-6">
+        <label for="pickupDate" class="form-label">Pickup Date</label>
+        <input type="date" id="pickupDate" class="form-control" required>
+      </div>
+      <div class="col-md-6">
+        <label for="pickupTime" class="form-label">Pickup Time</label>
+        <input type="time" id="pickupTime" class="form-control" required>
+      </div>
+
+      <!-- Pickup Location Input -->
+      <div class="col-md-6">
+        <label for="pickupLocation" class="form-label">Enter Pickup Location</label>
+        <input type="text" id="pickupLocation" class="form-control" placeholder="Enter location" required>
+      </div>
+      <div id="offerSelectSection" style="display: none;">
+        <label for="offerSelect">Select Offer</label>
+        <select class="form-control" id="offerSelect" aria-label="Offer Select">
+          <option value="0" selected>Choose an offer</option>
+          <option value="1">Free Fuel</option>
+          <option value="2">20% Off</option>
+          <option value="3">Extra Day Free</option>
+        </select>
+      </div>
+      <div id="CarSelectSection" style="display: none;">
+        <label for="carSelect">Select car</label>
+        <select class="form-control" id="carSelect" aria-label="car Select">
+          <option value="0" selected>Choose your car</option>
+          <option value="BMW X4">BMW X4</option>
+          <option value="Nissan Sentra">Nissan Sentra</option>
+          <option value="Hondi alentra">Hondi alentra</option>
+          <option value="Mercedes-Benz A">Mercedes-Benz A</option>
+          <option value="toyota yares">toyota yares</option>
+        </select>
+      </div>
+      <hr>
+      <h4 class="gradient">Drop-off Data</h4>
+      <div class="col-md-6">
+
+        <label for="dropoffDate" class="form-label">Drop-off Date</label>
+        <input type="date" id="dropoffDate" class="form-control" required>
+      </div>
+
+      <div class="col-md-6">
+        <label for="dropoffTime" class="form-label">Drop-off Time</label>
+        <input type="time" id="dropoffTime" class="form-control" required>
+      </div>
+
+      <!-- Drop-off Location Input -->
+      <div class="col-md-6">
+        <label for="dropoffLocation" class="form-label">Enter Drop-off Location</label>
+        <input type="text" id="dropoffLocation" class="form-control" placeholder="Enter location" required>
+      </div>
+
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+      
+    </form>
+
+    <div id="confirmation" class="alert alert-success mt-4" style="display: none;">
+      <h4 class="alert-heading">Booking Confirmed!</h4>
+      <p id="bookingSummary"></p>
+    </div>
+  </div>
+
+
+
+  <!-- Footer -->
+  <footer class="text-center text-lg-start">
+    <div class="container text-center text-md-start">
+      <div class="row text-center text-md-start">
+        <div class="col-md-3">
+          <img class="navbar-brand me-2" width="200" height="200" src="images/Car_logo.png">
+          <p>Your reliable car rental partner for every road ahead.</p>
+        </div>
+        <div class="col-md-3">
+          <h6 class="text-uppercase fw-bold">Quick Links</h6>
+          <ul class="list-unstyled">
+            <li><a href="homepage.html">Homepage</a></li>
+            <li><a href="carListing.html">Cars</a></li>
+            <li><a href="bookinghistory.html">My Bookings</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h6 class="text-uppercase fw-bold">Contact</h6>
+          <p><i class="fas fa-home me-2"></i> New Cairo, Egypt</p>
+          <p><i class="fas fa-envelope me-2"></i> info@gowheels.com</p>
+          <p><i class="fas fa-phone me-2"></i> +20 100 000 0000</p>
+        </div>
+        <div class="col-md-3">
+          <h6 class="text-uppercase fw-bold">Follow Us</h6>
+          <a href="#"><i class="fab fa-facebook-f me-3"></i></a>
+          <a href="#"><i class="fab fa-instagram me-3"></i></a>
+          <a href="#"><i class="fab fa-twitter me-3"></i></a>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script type="module" src="carDetails.js"></script>
+  <script type="module" src="js/booking.js"></script>
+  <script type="module" src="js/offers.js"></script>
+</body>
+
+</html>

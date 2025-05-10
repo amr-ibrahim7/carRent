@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Car Listing Page</title>
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Bootstrap Icons -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+        <!-- Font Awesome -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+        
+        <link rel="stylesheet" href="./css/carListing.css">
+    </head>
+    
+    <body>   
+        <!-- main header -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <img class="navbar-brand me-2" width="120" height="120" src="./images/Car_logo.png">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon bg-light rounded-2"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="homepage.html">Homepage</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="carListing.html">list of cars</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="rentmycar.html">Rent my car</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="MyCarRentdisplay.html">My cars</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="bookinghistory.html">My Bookings</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        
+        <section>
+
+            <!-- the carListing page header that show the title and the main bg image -->
+            <div class="container-fluid pageHeader">
+                <h1>Cars <span>List</span></h1>
+            </div>
+            
+            <!-- the search input & the select options to filter & the filter button -->
+            <div id="searchFilter" class="row mb-4" >
+                <div class="col-md-3">
+                    <input type="text" id="searchInput" class="form-control" placeholder="Search for a car...">
+                </div>
+                <div class="col-md-3">
+                    <select id="typeFilter" class="form-select">
+                        <option value="">Car Type</option>
+                        <option value="SUV">SUV</option>
+                        <option value="Sedan">Sedan</option>
+                        <option value="Truck">Truck</option>
+                        <option value="Sport">Sport</option>
+                        <option value="Luxury">Luxury</option>
+                        <option value="Hatchback">Hatchback</option>
+                        <option value="Convertible">Convertible</option>
+                        <option value="Minivan">Minivan</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <input type="number" id="priceFilter" class="form-control" placeholder="Max Price" min="1">
+                </div>
+                <div class="col-md-3">
+                    <button id="applyFiltersBtn" class="btn btn-primary w-100">Apply Filters</button>
+                </div>
+            </div>
+
+            <!-- the container of the car units -->
+            <div class="row" id="carsContainer"></div>
+
+            <!-- the pagination to navigate across the cars -->
+            <nav>
+                <ul class="pagination" id="paginationContainer"></ul>
+            </nav>
+
+            <!-- the reset button to reset all filters -->
+            <div class="col-md-3 reset">
+                <button id="resetFiltersBtn" class="btn btn-secondary w-100 mt-3">Reset Filters</button>
+            </div>
+        </section>
+
+        <!-- footer -->
+        <footer class="text-center text-lg-start custom-footer">
+            <div class="container text-center text-md-start">
+                <div class="row text-center text-md-start">
+                    <div class="col-md-3 mb-4">
+                        <img class="navbar-brand me-2" width="200" height="200" src="../Images/Car_logo.png" alt="GoWheels Logo">
+                        <p>Your reliable car rental partner for every road ahead.</p>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                        <h6 class="text-uppercase fw-bold">Quick Links</h6>
+                        <ul class="list-unstyled footer-links">
+                            <li><a href="homepage.html">Homepage</a></li>
+                            <li><a href="carListing.html">Cars</a></li>
+                            <li><a href="bookinghistory.html">History</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                        <h6 class="text-uppercase fw-bold">Contact</h6>
+                        <p><i class="fas fa-home me-2"></i> New Cairo, Egypt</p>
+                        <p><i class="fas fa-envelope me-2"></i> info@gowheels.com</p>
+                        <p><i class="fas fa-phone me-2"></i> +20 100 000 0000</p>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                        <h6 class="text-uppercase fw-bold">Follow Us</h6>
+                        <div class="footer-social-icons">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script type="module" src="./js/carListing.js"></script>
+    </body>
+</html>

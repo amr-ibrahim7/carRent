@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/adminLogin.css" />
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6 bg-light leftSide">
+          <div
+            class="d-flex flex-column justify-content-center align-items-center"
+          >
+            <h3>WELCOME BACK</h3>
+            <h4>Admin Login! please enter your details</h4>
+          </div>
+          <form action="" class="form">
+            <label for="email">username</label>
+            <input type="text" id="email" placeholder="Enter your username" />
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Password" />
+            <button id="login-btn" class="mt-4">LOGIN</button>
+            <div id="login-msg" class="mt-2 text-danger text-center"></div>
+          </form>
+        </div>
+        <div class="col-md-6 rightSide">
+          <img class="carLogo" src="images/Car_logo.png" />
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/adminLogin.js"></script>
+  </body>
+</html>

@@ -1,0 +1,137 @@
+/* ===== NAVBAR ===== */
+.navbar {
+    background-color: #1F3044 !important;
+    font-size: 20px;
+    animation: slideDown 0.8s ease;
+}
+
+.navbar-brand img {
+    width: 120px;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .navbar-brand img {
+        width: 80px;
+    }
+}
+
+.navbar-nav .nav-link {
+    color: #fff !important;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    font-weight: bold;
+    color: #FF2742 !important;
+}
+
+/* ===== BUTTONS ===== */
+.btn-warning {
+    background-color: #FF2742;
+    border-color: #FF2742;
+    color: #fff;
+    font-weight: bold;
+}
+
+.btn-warning:hover {
+    background-color: #1F3044;
+    border-color: #1F3044;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+.btn-outline-dark {
+    border-color: #1F3044;
+    color: #1F3044;
+}
+
+.btn-outline-dark:hover {
+    background-color: #1F3044;
+    color: #fff;
+}
+
+.btn-primary {
+    background-color: #1F3044;
+    border-color: #1F3044;
+    color: white;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: #FF2742;
+    border-color: #FF2742;
+    transform: scale(1.05);
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background-color: #1F3044;
+    color: #fff;
+    padding: 40px 0;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    font-weight: bold;
+    color: #FF2742;
+}
+
+@media (max-width: 576px) {
+    .custom-footer p,
+    .custom-footer a {
+        font-size: 14px;
+    }
+
+    .footer-social-icons a {
+        font-size: 18px;
+        margin-right: 10px;
+    }
+}
+
+/* ===== CARD DESIGN ===== */
+.card-title {
+    color: #1F3044;
+    font-size: 25px;
+}
+
+.card-body {
+    background: linear-gradient(-15deg, #daebd9, #f5e8e8, #fff);
+}
+
+.card-body p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #1F3044;
+}
+
+/* ===== RESPONSIVE CARD TEXT ===== */
+@media (max-width: 768px) {
+    .card-title {
+        font-size: 20px;
+    }
+
+    .card-body p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 576px) {
+    .card-title {
+        font-size: 18px;
+    }
+
+    .card-body p {
+        font-size: 14px;
+    }
+
+    .navbar-nav {
+        text-align: center;
+    }
+}

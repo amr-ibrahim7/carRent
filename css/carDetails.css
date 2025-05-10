@@ -1,0 +1,268 @@
+body
+{
+    background-color: #1F3044;
+    color: #fff;
+}
+
+/* =================================== the main header style ============================= */
+.navbar
+{
+    background-color: #1F3044 !important;
+    font-size: 20px;
+    animation: slideDown 0.8s ease;
+}
+
+.navbar-brand
+{
+    color: #fff;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.navbar-nav .nav-link
+{
+    color: #fff !important;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover
+{
+    font-weight: bold;
+    color: #FF2742 !important;
+}
+
+/* =================================== the details page header style ============================= */
+
+#carMainPic
+{
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    margin-top: 0px;
+}
+.pageHeader
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-bottom: 90px;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-title
+{
+    font-size: 5rem;
+    font-weight: 700;
+}
+
+.hero-title span
+{
+    color: #FF2742;
+}
+.pageHeader h6
+{
+    font-size: 23px;
+}
+
+@media (max-width: 991.98px)
+{
+    .pageHeader
+    {
+        height: 300px;
+    }
+    #carMainPic
+    {
+        height:300px;
+    }
+    .contact-card-wrapper
+    {
+        margin-top: 20px;
+    }
+}
+
+/* ========= the container of the all the data the card and the general  ======== */
+.container
+{
+    margin-top: 0px;
+    background-color: #1F3044;
+    width: auto;
+}
+
+/* ========================== the left column style for car details card ======================== */
+.leftCol
+{
+    background-color: transparent;
+}
+
+.contact-card-wrapper
+{
+    background-color: transparent;
+    margin-right: 0px;
+}  
+
+.bg-primary-dark
+{
+    background-color: white;
+}
+
+.bg-primary-dark p
+{
+    color: #1F3044;
+    font-size: 20px;
+}
+
+.bg-secondary-dark
+{
+    background-color:white;
+}
+
+.bg-accent
+{
+    background-color: #FF2742;
+    color: whit;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.collapsed
+{
+    font-size: 20px;
+    color:#1F3044;
+}
+
+.collapsed_text
+{
+    color:#1F3044;
+    font-size: 20px;
+}
+
+#general
+{
+    font-size: 20px;
+}
+
+.text-muted-custom
+{
+    color: #c7bdbd;
+    font-size: 20px;
+}
+
+.btn-accent
+{
+    background-color: #FF2742;
+    border: none;
+    color: white;
+}
+
+.btn-disabled
+{
+    background-color: #ff27409c;
+    border: none;
+    color: white;
+}
+
+.btn-disabled:hover
+{
+    background-color: #ff27409c;
+    border: none;
+    color: white;
+    cursor:default;
+}
+
+.btn-accent:hover
+{
+    background-color: #990c1d;
+    color: white;
+}
+
+.btn-accent-outline
+{
+    background-color: rgb(28, 180, 28);
+    color: #fff;
+}
+
+.btn-accent-outline:hover
+{
+    background-color: rgb(9, 107, 9);
+    color: #fff;
+}
+
+.whats_btn
+{
+    background-color: rgb(28, 180, 28);
+    color: #fff;
+}
+.whats_btn:hover
+{
+    background-color: rgb(9, 107, 9);
+    color: #fff;
+}
+
+/* ================= callin for users to rent with us ( the part before the footer ) style ================ */
+.calling
+{
+    background:linear-gradient(rgba(10, 10, 10, 0.205), rgba(10, 10, 10, 0.205)), url('../Images/bg3.jpg') center center/cover;
+    /* background:linear-gradient(rgba(0, 0, 0, 0.534), rgba(0, 0, 0, 0.534)), url('../Images/bg3.jpg') center center/cover no-repeat fixed; */
+    height: 500px;
+}
+.calling h6
+{
+    color: #FF2742;
+}
+
+
+.section-spacing
+{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.rounded-box
+{
+    border-radius: 10px;
+}
+
+.padding-box
+{
+    padding: 1.5rem;
+}
+
+.navbar-custom
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.rounded-top
+{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* ================================= foter style ================================== */
+footer
+{
+    background-color: #1F3044;
+    color: #fff;
+    padding: 40px 0;
+}
+
+footer a
+{
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover
+{
+    font-weight: bold;
+    color: #FF2742;
+}
