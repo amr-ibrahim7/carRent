@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Rent Homepage</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/homepagestyle.css" />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <img
+          class="navbar-brand me-2"
+          width="120"
+          height="120"
+          src="images/Car_logo.png"
+        />
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon bg-light rounded-2"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-center"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >Homepage</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="carListing.html">list of cars</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="rentmycar.html">Rent my car</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="MyCarRentdisplay.html">My cars</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="bookinghistory.html">My Bookings</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Section -->
+    <section
+      class="main-section py-5 bg-light position-relative overflow-hidden"
+    >
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 px-5">
+            <h2 class="mb-4 fw-bold">
+              Explore the freedom of car rental with
+              <span class="gradient-text">Go Wheels</span>.
+            </h2>
+            <p class="lead">
+              Whether you're planning a road trip, need a reliable vehicle for a
+              business trip, or just want the convenience of having a car at
+              your disposal, we've got you covered.
+            </p>
+
+            <a href="carListing.html">
+              <button type="button" class="btn btn-outline-dark mt-3">
+                <i class="bi bi-arrow-right-circle-fill me-1"></i> Explore Cars
+              </button>
+            </a>
+          </div>
+          <div class="col-md-6 text-center position-relative">
+            <div class="background-block"></div>
+            <img
+              src="images/main.png"
+              class="img-fluid animate-zoom car-image"
+              alt="Car Image"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      class="main-section mainn py-5 bg-light position-relative overflow-hidden"
+    >
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 text-center position-relative mb-4 mb-md-0">
+            <img
+              src="images/buying-renting.jpg"
+              class="img-fluid animate-zoom car-image image"
+              alt="Car Image"
+            />
+          </div>
+          <div class="col-md-6 px-5">
+            <h2 class="mb-4 fw-bold">
+              The Easiest Way To Rent Your Car with
+              <span class="gradient-text">Go Wheels</span>.
+            </h2>
+            <p class="lead">
+              Share your vehicle details and receive an offer in minutes!
+            </p>
+            <a
+              type="button"
+              class="btn btn-warning mt-3 me-2"
+              href="rentmycar.html"
+              >upload your car</a
+            >
+            <a
+              type="button"
+              class="btn btn-primary mt-3 me-2"
+              href="MyCarRentdisplay.html"
+              >see your offer</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slogan + Carousel Section -->
+    <section style="background-color: #1f3044; padding: 60px 0">
+      <div class="container caro text-center text-white mb-5">
+        <h2 class="display-5 fw-bold">Pick it. Book it. Drive it.</h2>
+        <p class="leadd">Rent your dream car in minutes with Go Wheels.</p>
+      </div>
+
+      <div
+        id="carouselExampleAutoplaying"
+        class="carousel slide"
+        data-bs-ride="carousel"
+        data-bs-interval="1000"
+        style="max-width: 700px; margin: 0 auto"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active text-center">
+            <img
+              src="images/1.png"
+              class="d-block mx-auto w-100 img-fluid"
+              style="max-height: 550px; object-fit: contain"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item text-center">
+            <img
+              src="images/2.png"
+              class="d-block mx-auto w-100 img-fluid"
+              style="max-height: 550px; object-fit: contain"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item text-center">
+            <img
+              src="images/3.png"
+              class="d-block mx-auto w-100 img-fluid"
+              style="max-height: 550px; object-fit: contain"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item text-center">
+            <img
+              src="images/4.png"
+              class="d-block mx-auto w-100 img-fluid"
+              style="max-height: 550px; object-fit: contain"
+              alt="..."
+            />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleAutoplaying"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleAutoplaying"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+
+        <a href="carListing.html">
+          <div class="text-center mt-4">
+            <button
+              type="button"
+              class="btn btn-primary btn-lg px-5 py-3"
+              style="font-size: 1.5rem"
+            >
+              Explore Cars
+            </button>
+          </div>
+        </a>
+      </div>
+    </section>
+    <section class="brand-section py-5">
+      <div class="container">
+        <h2 class="text-center mb-4">Our Trusted Brands</h2>
+        <div class="row text-center">
+          <div class="col-6 col-md-2 mb-4">
+            <img src="images/bmw.png" class="img-fluid" alt="Brand 1" />
+          </div>
+          <div class="col-6 col-md-2 mb-4">
+            <img src="images/jeep.png" class="img-fluid" alt="Brand 2" />
+          </div>
+          <div class="col-6 col-md-2 mb-4">
+            <img src="images/kia.png" class="img-fluid" alt="Brand 3" />
+          </div>
+          <div class="col-6 col-md-2 mb-4">
+            <img src="images/toyota.png" class="img-fluid" alt="Brand 4" />
+          </div>
+          <div class="col-6 col-md-2 mb-4">
+            <img src="images/nissan.png" class="img-fluid" alt="Brand 5" />
+          </div>
+          <div class="col-6 col-md-2 mb-4">
+            <img src="images/ferrari.png" class="img-fluid" alt="Brand 5" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Offers -->
+    <div class="offers-section py-5">
+      <div class="container text-center">
+        <h1 class="mb-5 text-white fw-bold">
+          Don't Miss Out These Time-Limited Offers!
+        </h1>
+        <h2>NOTE:these offers are applied only on limited cars</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="offer-card p-3 h-100">
+              <div class="offer-img">
+                <img src="images/off2.png" class="img-fluid" alt="Free Fuel" />
+              </div>
+              <div class="offer-body mt-3">
+                <h5 class="fw-bold">Free Fuel</h5>
+                <p>Book now and get your first tank of fuel free!</p>
+                <p>there is 50% if you rent your car on wednesday HURRY UP!</p>
+              </div>
+              <button
+                type="button"
+                class="btn btn-primary btn-lg px-5 py-3 mt-3"
+                onclick="selectCarAndOffer('..',1)"
+              >
+                Book Now
+              </button>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="offer-card p-3 h-100">
+              <div class="offer-img">
+                <img
+                  src="images/off1.png"
+                  class="img-fluid"
+                  alt="Weekend Deal"
+                />
+              </div>
+              <div class="offer-body mt-3">
+                <h5 class="fw-bold">Weekend Deal</h5>
+                <p>Get 20% off on all rentals this weekend only!</p>
+                <p>if you rent the car for 6 days you will get one day free</p>
+              </div>
+              <button
+                class="btn btn-primary btn-lg px-5 py-3 mt-3"
+                onclick="selectCarAndOffer('..',2)"
+              >
+                Book Now
+              </button>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="offer-card p-3 h-100">
+              <div class="offer-img">
+                <img src="images/off3.png" class="img-fluid" alt="Extra Day" />
+              </div>
+              <div class="offer-body mt-3">
+                <h5 class="fw-bold">Extra Day</h5>
+                <p>Rent for 3 days, keep it for 4 at no extra cost!</p>
+              </div>
+              <button
+                type="button"
+                class="btn btn-primary btn-lg px-5 py-3 mt-3"
+                onclick="selectCarAndOffer('..',3)"
+              >
+                Book Now
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Why Choose Us -->
+    <section class="py-5 why-choose-us">
+      <div class="container text-center">
+        <h2 class="mb-4 text-dark">Why Choose Us?</h2>
+        <div class="row">
+          <div class="col-md-3 mb-3">
+            <div class="card h-100">
+              <div class="card-body">
+                <i class="fas fa-car fa-2x mb-3 gradient-text"></i>
+                <h5 class="card-title gradient-text">Wide Range of Vehicles</h5>
+                <p class="card-text">
+                  From compact cars to SUVs, we have options for every journey.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <div class="card h-100">
+              <div class="card-body">
+                <i class="bi bi-geo-alt-fill fa-2x mb-3 gradient-text"></i>
+                <h5 class="card-title gradient-text">Easy Pickup & Drop-off</h5>
+                <p class="card-text">
+                  Flexible locations and a hassle-free booking process.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <div class="card h-100">
+              <div class="card-body">
+                <i class="fas fa-dollar-sign fa-2x mb-3 gradient-text"></i>
+                <h5 class="card-title gradient-text">Affordable Rates</h5>
+                <p class="card-text">
+                  Enjoy competitive prices with no hidden fees.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <div class="card h-100">
+              <div class="card-body">
+                <i class="bi bi-shield-check fa-2x mb-3 gradient-text"></i>
+                <h5 class="card-title gradient-text">Trusted & Insured</h5>
+                <p class="card-text">
+                  All vehicles are fully insured and regularly maintained.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center text-lg-start custom-footer">
+      <div class="container text-center text-md-start">
+        <div class="row text-center text-md-start">
+          <div class="col-12 col-md-3 mb-4">
+            <img
+              class="navbar-brand me-2"
+              width="200"
+              height="200"
+              src="images/Car_logo.png"
+              alt="GoWheels Logo"
+            />
+            <p>Your reliable car rental partner for every road ahead.</p>
+          </div>
+          <div class="col-12 col-md-3 mb-4">
+            <h6 class="text-uppercase fw-bold">Quick Links</h6>
+            <ul class="list-unstyled footer-links">
+              <li><a href="index.html">Homepage</a></li>
+              <li><a href="carListing.html">Cars</a></li>
+              <li><a href="bookinghistory.html">Bookings</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-3 mb-4">
+            <h6 class="text-uppercase fw-bold">Contact</h6>
+            <p><i class="fas fa-home me-2"></i> New Cairo, Egypt</p>
+            <p><i class="fas fa-envelope me-2"></i> info@gowheels.com</p>
+            <p><i class="fas fa-phone me-2"></i> +20 100 000 0000</p>
+          </div>
+          <div class="col-12 col-md-3 mb-4">
+            <h6 class="text-uppercase fw-bold">Follow Us</h6>
+            <div class="footer-social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="js/booking.js"></script>
+  </body>
+</html>

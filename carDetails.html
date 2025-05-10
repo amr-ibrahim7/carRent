@@ -1,271 +1,394 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Car Details & Rental</title>
-        <!-- Bootstrap CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-        <!-- Bootstrap Icons -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-        <!-- Font Awesome -->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="css/carDetails.css">
-    </head>
-    <body>
-        <!-- the nav bar header -->
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
-                <img class="navbar-brand me-2" width="120" height="120" src="../Images/Car_logo.png">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon bg-light rounded-2"></span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Car Details & Rental</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/carDetails.css" />
+  </head>
+  <body>
+    <!-- the nav bar header -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <img
+          class="navbar-brand me-2"
+          width="120"
+          height="120"
+          src="../Images/Car_logo.png"
+        />
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon bg-light rounded-2"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-center"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >Homepage</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="carListing.html">list of cars</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="rentmycar.html">Rent my car</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="MyCarRentdisplay.html">My cars</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="bookinghistory.html">My Bookings</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- the container of the pic of the car that shown after the header -->
+    <div id="carMainPic"></div>
+
+    <!-- Main Content -->
+    <div class="container my-5">
+      <div class="row">
+        <!-- Left Column to show general info of the car -->
+        <div class="col-lg-8 leftCol">
+          <h3 class="text-light">General Information</h3>
+          <div id="general"></div>
+          <ul class="list-unstyled text-muted-custom">
+            <li>✔ 24/7 Roadside Assistance</li>
+            <li>✔ Free Cancellation & Return</li>
+            <li>✔ Pay When You Arrive</li>
+          </ul>
+
+          <h3 class="text-light mt-4">Image Gallery</h3>
+          <div id="imgs" class="row g-3">
+            <div id="img1" class="col-6"></div>
+
+            <!-- div to expand the img1 in the Gallery -->
+            <div
+              class="modal fade"
+              id="modalImg1"
+              tabindex="-1"
+              aria-labelledby="modalImg1Label"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <img
+                      src=""
+                      id="modalImg1Src"
+                      class="img-fluid"
+                      alt="Expanded Car 1"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div id="img2" class="col-6"></div>
+
+            <!-- div to expand the img2 in the Gallery -->
+            <div
+              class="modal fade"
+              id="modalImg2"
+              tabindex="-1"
+              aria-labelledby="modalImg2Label"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <img
+                      src=""
+                      id="modalImg2Src"
+                      class="img-fluid"
+                      alt="Expanded Car 2"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- general info about the details of dealing with us -->
+          <div class="accordion mt-4" id="rentalConditions">
+            <div class="accordion-item bg-secondary-dark collapsed_text">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed text-dark"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                >
+                  1. Contract and Annexes
                 </button>
-                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="homepage.html">Homepage</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="carListing.html">list of cars</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="rentmycar.html">Rent my car</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="MyCarRentdisplay.html">My cars</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="bookinghistory.html">My Bookings</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact us</a>
-                        </li>
-                    </ul>
+              </h2>
+              <div
+                id="collapseOne"
+                class="accordion-collapse collapse"
+                data-bs-parent="#rentalConditions"
+              >
+                <div class="accordion-body collapsed_text">
+                  In addition to the car rental contract to be signed at the
+                  time of delivery, a credit card is required from our
+                  individual customers. We request our commercial customers to
+                  submit their company documents (tax plate, signature slip, ID
+                  photocopy).
                 </div>
+              </div>
             </div>
-        </nav>
 
-        <!-- the container of the pic of the car that shown after the header -->
-        <div id="carMainPic"></div>
-
-        <!-- Main Content -->
-        <div class="container my-5">
-            <div class="row">
-
-                <!-- Left Column to show general info of the car -->
-                <div class="col-lg-8 leftCol">
-                    <h3 class="text-light">General Information</h3>
-                    <div id="general"></div>
-                    <ul class="list-unstyled text-muted-custom">
-                        <li>✔ 24/7 Roadside Assistance</li>
-                        <li>✔ Free Cancellation & Return</li>
-                        <li>✔ Pay When You Arrive</li>
-                    </ul>
-
-                    <h3 class="text-light mt-4">Image Gallery</h3>
-                    <div id="imgs" class="row g-3">
-                        <div id="img1" class="col-6"></div>
-
-                        <!-- div to expand the img1 in the Gallery -->
-                        <div class="modal fade" id="modalImg1" tabindex="-1" aria-labelledby="modalImg1Label" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered modal-lg">
-                            <div class="modal-content">
-                                <div class="modal-body">
-                                <img src="" id="modalImg1Src" class="img-fluid" alt="Expanded Car 1">
-                                </div>
-                            </div>
-                            </div>
-                        </div>
-
-                        <div id="img2" class="col-6"></div>
-
-                        <!-- div to expand the img2 in the Gallery -->
-                        <div class="modal fade" id="modalImg2" tabindex="-1" aria-labelledby="modalImg2Label" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered modal-lg">
-                                <div class="modal-content">
-                                    <div class="modal-body">
-                                        <img src="" id="modalImg2Src" class="img-fluid" alt="Expanded Car 2">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <!-- general info about the details of dealing with us -->
-                    <div class="accordion mt-4" id="rentalConditions">
-                        <div class="accordion-item bg-secondary-dark collapsed_text">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
-                                    1. Contract and Annexes
-                                </button>
-                            </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#rentalConditions">
-                                <div class="accordion-body collapsed_text">
-                                    In addition to the car rental contract to be signed at the time of delivery, 
-                                    a credit card is required from our individual customers. 
-                                    We request our commercial customers to submit their company documents 
-                                    (tax plate, signature slip, ID photocopy).
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion-item bg-secondary-dark collapsed_text">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
-                                    2. Driving License and Age
-                                </button>
-                            </h2>
-                            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#rentalConditions">
-                                <div class="accordion-body collapsed_text">
-                                    The tenant must be 25 years of age and have a 5-year local or valid international 
-                                    driver's license for group A, B, C, D vehicles at the time of the rental agreement.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion-item bg-secondary-dark collapsed_text">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
-                                    3. Prices
-                                </button>
-                            </h2>
-                            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#rentalConditions">
-                                <div class="accordion-body collapsed_text">
-                                    Prices include maintenance and insurance guarantee against third parties (within legal policy limits). 
-                                    18% VAT (value added tax) is not included. Fuel belongs to the renter. 
-                                    Chauffeur driven service and translator guide are available upon request.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion-item bg-secondary-dark collapsed_text">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
-                                    4.  Payments
-                                </button>
-                            </h2>
-                            <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#rentalConditions">
-                                <div class="accordion-body collapsed_text">
-                                    The total rental fee is collected at the time of rental. The shortest rental period 
-                                    is 72 hours, and in case of delay, 1/3 of the fee is charged for each additional hour. 
-                                    Delays exceeding 3 hours in total are calculated as a full day. 
-                                    A deposit is required from a valid credit card.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion-item bg-secondary-dark collapsed_text">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
-                                    5. Delivery
-                                </button>
-                            </h2>
-                            <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#rentalConditions">
-                                <div class="accordion-body collapsed_text">
-                                    Delivery is free of charge where our Rent a car company is located. 
-                                    Delivery in these cities is possible with prior notice; hotel, workplace, 
-                                    station, port etc. It can be done in places. For vehicle deliveries and returns 
-                                    in cities where our office is not located, a delivery fee of 0.2 Euro/km is applied, 
-                                    starting from the rented location.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion-item bg-secondary-dark collapsed_text">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix">
-                                    6. Traffic Fines
-                                </button>
-                            </h2>
-                            <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#rentalConditions">
-                                <div class="accordion-body collapsed_text">
-                                    Traffic fines toll and illegal toll fees belong to the customer. 
-                                    If the vehicles are detained by traffic, this period is included 
-                                    in the rental period. In necessary cases, we may change these conditions 
-                                    and information and the vehicle type specified in the reservation without 
-                                    prior notice. Our vehicles cannot be taken abroad.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion-item bg-secondary-dark collapsed_text">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven">
-                                    7. Contract and Annexes
-                                </button>
-                            </h2>
-                            <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#rentalConditions">
-                                <div class="accordion-body collapsed_text">
-                                    In addition to the car rental contract to be signed at the time of delivery, 
-                                    a credit card is required from our individual customers. We request our commercial 
-                                    customers to submit their company documents (tax plate, signature slip, ID photocopy).
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="accordion-item bg-secondary-dark collapsed_text">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed text-dark"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo"
+                >
+                  2. Driving License and Age
+                </button>
+              </h2>
+              <div
+                id="collapseTwo"
+                class="accordion-collapse collapse"
+                data-bs-parent="#rentalConditions"
+              >
+                <div class="accordion-body collapsed_text">
+                  The tenant must be 25 years of age and have a 5-year local or
+                  valid international driver's license for group A, B, C, D
+                  vehicles at the time of the rental agreement.
                 </div>
-
-                <!-- container to display the main car detailed data in it  -->
-                <div id="detailsInfo" class="contact-card-wrapper col-lg-4"></div>
-
+              </div>
             </div>
+
+            <div class="accordion-item bg-secondary-dark collapsed_text">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed text-dark"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree"
+                >
+                  3. Prices
+                </button>
+              </h2>
+              <div
+                id="collapseThree"
+                class="accordion-collapse collapse"
+                data-bs-parent="#rentalConditions"
+              >
+                <div class="accordion-body collapsed_text">
+                  Prices include maintenance and insurance guarantee against
+                  third parties (within legal policy limits). 18% VAT (value
+                  added tax) is not included. Fuel belongs to the renter.
+                  Chauffeur driven service and translator guide are available
+                  upon request.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item bg-secondary-dark collapsed_text">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed text-dark"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseFour"
+                >
+                  4. Payments
+                </button>
+              </h2>
+              <div
+                id="collapseFour"
+                class="accordion-collapse collapse"
+                data-bs-parent="#rentalConditions"
+              >
+                <div class="accordion-body collapsed_text">
+                  The total rental fee is collected at the time of rental. The
+                  shortest rental period is 72 hours, and in case of delay, 1/3
+                  of the fee is charged for each additional hour. Delays
+                  exceeding 3 hours in total are calculated as a full day. A
+                  deposit is required from a valid credit card.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item bg-secondary-dark collapsed_text">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed text-dark"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseFive"
+                >
+                  5. Delivery
+                </button>
+              </h2>
+              <div
+                id="collapseFive"
+                class="accordion-collapse collapse"
+                data-bs-parent="#rentalConditions"
+              >
+                <div class="accordion-body collapsed_text">
+                  Delivery is free of charge where our Rent a car company is
+                  located. Delivery in these cities is possible with prior
+                  notice; hotel, workplace, station, port etc. It can be done in
+                  places. For vehicle deliveries and returns in cities where our
+                  office is not located, a delivery fee of 0.2 Euro/km is
+                  applied, starting from the rented location.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item bg-secondary-dark collapsed_text">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed text-dark"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseSix"
+                >
+                  6. Traffic Fines
+                </button>
+              </h2>
+              <div
+                id="collapseSix"
+                class="accordion-collapse collapse"
+                data-bs-parent="#rentalConditions"
+              >
+                <div class="accordion-body collapsed_text">
+                  Traffic fines toll and illegal toll fees belong to the
+                  customer. If the vehicles are detained by traffic, this period
+                  is included in the rental period. In necessary cases, we may
+                  change these conditions and information and the vehicle type
+                  specified in the reservation without prior notice. Our
+                  vehicles cannot be taken abroad.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item bg-secondary-dark collapsed_text">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed text-dark"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseSeven"
+                >
+                  7. Contract and Annexes
+                </button>
+              </h2>
+              <div
+                id="collapseSeven"
+                class="accordion-collapse collapse"
+                data-bs-parent="#rentalConditions"
+              >
+                <div class="accordion-body collapsed_text">
+                  In addition to the car rental contract to be signed at the
+                  time of delivery, a credit card is required from our
+                  individual customers. We request our commercial customers to
+                  submit their company documents (tax plate, signature slip, ID
+                  photocopy).
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
+        <!-- container to display the main car detailed data in it  -->
+        <div id="detailsInfo" class="contact-card-wrapper col-lg-4"></div>
+      </div>
+    </div>
+
     <!-- callin for users to rent with us ( the part before the footer ) -->
-        <section class="calling text-center text-white py-5">
-            <div class="last_container py-5">
-                <h6 class="text-uppercase">Rent your car</h6>
-                <h2 class="fw-bold">Interested in Renting?</h2>
-                <p>Don't hesitate and send us a message.</p>
-                <div class="d-flex justify-content-center gap-3">
-                    <a href="http://wa.me/00201095343940" class="btn whats_btn">WhatsApp</a>
-                    <a href="carListing.html" class="btn btn-accent">Rent Now</a>
-                </div>
-            </div>
-        </section>
+    <section class="calling text-center text-white py-5">
+      <div class="last_container py-5">
+        <h6 class="text-uppercase">Rent your car</h6>
+        <h2 class="fw-bold">Interested in Renting?</h2>
+        <p>Don't hesitate and send us a message.</p>
+        <div class="d-flex justify-content-center gap-3">
+          <a href="http://wa.me/00201095343940" class="btn whats_btn"
+            >WhatsApp</a
+          >
+          <a href="carListing.html" class="btn btn-accent">Rent Now</a>
+        </div>
+      </div>
+    </section>
 
     <!-- Footer -->
-        <footer class="text-center text-lg-start custom-footer">
-            <div class="container text-center text-md-start">
-                <div class="row text-center text-md-start">
-                    <div class="col-md-3 mb-4">
-                        <img class="navbar-brand me-2" width="200" height="200" src="../Images/Car_logo.png" alt="GoWheels Logo">
-                        <p>Your reliable car rental partner for every road ahead.</p>
-                    </div>
-                    <div class="col-md-3 mb-4">
-                        <h6 class="text-uppercase fw-bold">Quick Links</h6>
-                        <ul class="list-unstyled footer-links">
-                            <li><a href="homepage.html">Homepage</a></li>
-                            <li><a href="carListing.html">Cars</a></li>
-                            <li><a href="bookinghistory.html">History</a></li>
-                            <li><a href="contact.html">Contact</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-3 mb-4">
-                        <h6 class="text-uppercase fw-bold">Contact</h6>
-                        <p><i class="fas fa-home me-2"></i> New Cairo, Egypt</p>
-                        <p><i class="fas fa-envelope me-2"></i> info@gowheels.com</p>
-                        <p><i class="fas fa-phone me-2"></i> +20 100 000 0000</p>
-                    </div>
-                    <div class="col-md-3 mb-4">
-                        <h6 class="text-uppercase fw-bold">Follow Us</h6>
-                        <div class="footer-social-icons">
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                        </div>
-                    </div>
-                </div>
+    <footer class="text-center text-lg-start custom-footer">
+      <div class="container text-center text-md-start">
+        <div class="row text-center text-md-start">
+          <div class="col-md-3 mb-4">
+            <img
+              class="navbar-brand me-2"
+              width="200"
+              height="200"
+              src="../Images/Car_logo.png"
+              alt="GoWheels Logo"
+            />
+            <p>Your reliable car rental partner for every road ahead.</p>
+          </div>
+          <div class="col-md-3 mb-4">
+            <h6 class="text-uppercase fw-bold">Quick Links</h6>
+            <ul class="list-unstyled footer-links">
+              <li><a href="index.html">Homepage</a></li>
+              <li><a href="carListing.html">Cars</a></li>
+              <li><a href="bookinghistory.html">History</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 mb-4">
+            <h6 class="text-uppercase fw-bold">Contact</h6>
+            <p><i class="fas fa-home me-2"></i> New Cairo, Egypt</p>
+            <p><i class="fas fa-envelope me-2"></i> info@gowheels.com</p>
+            <p><i class="fas fa-phone me-2"></i> +20 100 000 0000</p>
+          </div>
+          <div class="col-md-3 mb-4">
+            <h6 class="text-uppercase fw-bold">Follow Us</h6>
+            <div class="footer-social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
             </div>
-        </footer>
+          </div>
+        </div>
+      </div>
+    </footer>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-        <script src="js/carDetails.js" type="module"></script>
-        <script src="js/booking.js" type="module" defer></script>
-
-
-    </body>
+    <script src="js/carDetails.js" type="module"></script>
+    <script src="js/booking.js" type="module" defer></script>
+  </body>
 </html>
